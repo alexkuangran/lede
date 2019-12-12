@@ -27,7 +27,8 @@ jobs:
           ref: master
 
       - name: Initialization environment
-        env:
+        env:          ./scripts/feeds update -a
+
           DEBIAN_FRONTEND: noninteractive
         run: |
           docker rmi `docker images -q`
